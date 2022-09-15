@@ -7,11 +7,9 @@ from xml.etree import ElementTree
 import xmltodict
 import pandas as pd
 
-url = "http://apps.who.int/gho/athena/api/GHO/WHOSIS_000001"
+url = "https://twitter.com/explore/tabs/trending"
 res = requests.get(url)
-dict_data = xmltodict.parse(res.content)
-#print(dict_data)
-df = pd.DataFrame(dict_data)
-print(df)
-# soup = BeautifulSoup(res.content, 'html5lib')
-# print(soup.prettify())W
+soup = BeautifulSoup(res.content, "html.parser")
+#print(soup.prettify())
+title = soup.
+print(title)
